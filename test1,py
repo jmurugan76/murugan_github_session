@@ -1,0 +1,33 @@
+from datetime import datetime, date, timedelta
+
+# 1️⃣ Get Current Date and Time
+current_datetime = datetime.now()
+print("Current Date & Time:", current_datetime)
+
+# 2️⃣ Get Only Current Date
+today = date.today()
+print("Today's Date:", today)
+
+# 3️⃣ Format Date
+formatted_date = current_datetime.strftime("%d-%m-%Y %H:%M:%S")
+print("Formatted Date:", formatted_date)
+
+# 4️⃣ Add 10 Days to Today
+future_date = today + timedelta(days=10)
+print("Date after 10 days:", future_date)
+
+# 5️⃣ Subtract 5 Days from Today
+past_date = today - timedelta(days=5)
+print("Date before 5 days:", past_date)
+
+# 6️⃣ Difference Between Two Dates
+date1 = date(2025, 1, 1)
+date2 = date(2025, 2, 24)
+
+difference = date2 - date1
+print("Difference between two dates:", difference.days, "days")
+
+# 7️⃣ Age Calculation Example
+birth_date = date(1990, 5, 15)
+age = today.year - birth_date.year - ((today.month, today.day) < (birth_date.month, birth_date.day))
+print("Calculated Age:", age)
